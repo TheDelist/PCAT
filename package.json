@@ -4,11 +4,17 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+    
   },
   "author": "samet kemal ozdemir",
   "license": "ISC",
   "devDependencies": {
+    "nodemon": "^2.0.16",
     "prettier": "2.7.1"
+  },
+  "dependencies": {
+    "express": "^4.18.1"
   }
 }
