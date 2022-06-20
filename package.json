@@ -6,7 +6,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon app.js"
-    
   },
   "author": "samet kemal ozdemir",
   "license": "ISC",
@@ -15,6 +14,7 @@
     "prettier": "2.7.1"
   },
   "dependencies": {
+    "ejs": "^3.1.8",
     "express": "^4.18.1"
   }
 }
