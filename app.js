@@ -10,9 +10,11 @@ let ejs = require('ejs');
 const app = express();
 //connect DB
 mongoose.connect('mongodb://localhost/pcat-test-db');
+
+//TEMPLATE ENGINE
 app.set('view engine', 'ejs');
 
-//middleware
+//MIDDLEWARES
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -26,15 +28,15 @@ app.use(
 //ROUTES
 app.get('/', photoController.getAllPhotos);
 app.get('/photos/:id', photoController.getPhoto);
-app.put('/photos/:id', photoController.updatePhoto);
 app.post('/photos', photoController.createPhoto);
+app.put('/photos/:id', photoController.updatePhoto);
 app.delete('/photos/:id', photoController.deletePhoto);
 
 app.get('/about', pageController.getAboutPage);
 app.get('/add', pageController.getAddPage);
 app.get('/photos/edit/:id', pageController.getEditPage);
 
-const port = 3000;
+const port = process.env.PORT || 5000;
 app.listen(port, () => {
-  console.log(`server starter in port ${port}`);
+  console.log(`Sunucu ${port} portunda başlatıldı..`);
 });
