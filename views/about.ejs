@@ -1,16 +1,10 @@
-<%- include('partials/_header.ejs') %>
-
-</head>
+<%- include('partials/_header') -%>
 <body>
 	<div class="tm-page-wrap mx-auto">
 		<div class="position-relative">
-			<div class="potition-absolute tm-site-header">
-				<div class="container-fluid position-relative">
-					<div class="row">						
-                        <%- include('partials/_navbar.ejs') %>
-					</div>
-				</div>
-			</div>
+
+			<%- include('partials/_navigation') -%>
+
 			<div class="tm-welcome-container tm-fixed-header tm-fixed-header-2">
 				<div class="text-center">
 					<p class="pt-5 px-3 tm-welcome-text tm-welcome-text-2 mb-1 mt-lg-0 mt-5 text-white mx-auto">Another Image BG<br>it can be fixed.<br>Content will simply slide over.</p>                	
@@ -91,22 +85,9 @@
 		</main>
 
 		<div class="container-fluid tm-content-container mx-auto pt-5">
-			<!-- Subscribe form and footer links -->
-            <%- include ('partials/_footer.ejs') %> 
-            <!-- row -->
 
-            <footer class="row pt-5">
-                <div class="col-12">
-                    <p class="text-right">Copyright 2020 The Video Catalog Company 
-                        
-                        - Designed by <a href="https://templatemo.com" rel="nofollow" target="_parent">TemplateMo</a></p>
-                </div>
-            </footer>
-		</div>		
-	</div>
-
-	<script src="js/jquery-3.4.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+			<%- include('partials/_footer') -%>
+			
     <script src="js/parallax.min.js"></script>
 </body>
 </html>
